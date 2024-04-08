@@ -98,26 +98,61 @@ function EmailDetail({
   const [messages, dispatch] = useReducer(messageReducer, []);
   const [collapsedCount, setCollapsedCount] = useState(0);
   const [loadingMessage, setLoadingMessage] = useState('');
+  const [message, setMessages] = useState([]);
 
   useEffect(() => {
-    const setupMessages = async () => {
-      let showingMessages = selectedEmail.messages;
-      if (selectedEmail.messages.length > 4) {
-        showingMessages = [showingMessages[0], ...showingMessages.slice(-2)];
-        setCollapsedCount(selectedEmail.messages.length - 3);
+    // TODO: Retrieve all message data to create selectedEmail with a messages property
+    // need to update selectedEmail to include .messages property to display correctly   
+    if(!selectedEmail) return;
+    const { messageIds } = selectedEmail
+    let messages = [];
+
+    const retrieveMessages = async () => {
+      try {
+        const queryParams = new URLSearchParams({ id: selectedEmail.id });
+        const url = `${serverBaseUrl}/nylas/messages?${queryParams.toString()}`;
+        const res = await fetch(url, {
+          method: 'GET',
+          headers: {
+            Authorization: userId,
+            'Content-Type': 'application/json',
+          },
+        });
+        
+        messages = await res.json();
+        selectedEmail.messages = messages;
+        await setupMessages()
+      } catch (e) {
+        console.warn(`Error retrieving message:`, e);
+        setLoadingMessage('');
+        return false;
       }
+    }
 
-      dispatch({
-        type: ACTIONS.SET,
-        payload: { messages: showingMessages },
-      });
+    retrieveMessages()
 
-      const latestMessage = await getMessage(
-        showingMessages[showingMessages.length - 1]
-      );
-      dispatch({ type: ACTIONS.TOGGLE, payload: { message: latestMessage } });
-    };
+  }, [selectedEmail])
 
+  const setupMessages = async () => {
+      
+    let showingMessages = selectedEmail.messages || messages;
+    if (selectedEmail.messages.length > 4) {
+      showingMessages = [showingMessages[0], ...showingMessages.slice(-2)];
+      setCollapsedCount(selectedEmail.messages.length - 3);
+    }
+
+    dispatch({
+      type: ACTIONS.SET,
+      payload: { messages: showingMessages },
+    });
+
+    const latestMessage = await getMessage(
+      showingMessages[showingMessages.length - 1]
+    );
+    dispatch({ type: ACTIONS.TOGGLE, payload: { message: latestMessage } });
+  };
+
+  useEffect(() => {
     if (selectedEmail?.messages?.length) {
       setupMessages();
     }

@@ -12,7 +12,6 @@ function EmailList({
   setDraftEmail,
 }) {
   const handleEmailSelect = (thread) => {
-    console.log('thread', thread);
     setSelectedEmail(thread);
     if (draftEmail?.isOpen) {
       setDraftEmail((prev) => {
