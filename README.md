@@ -1,7 +1,5 @@
 # Web Email Client: Read and Send Emails using Nylas Email API
 
-**⚠️ Warning: This repo is still in the alpha development stage and stability is not fully guaranteed yet**
-
 Explore working front-end and back-end sample code using an integration with Nylas.
 
 The sample applications redirect to the Nylas hosted authentication page. Once a user authenticates, it allows them to interact with the Nylas APIs from a web client.
