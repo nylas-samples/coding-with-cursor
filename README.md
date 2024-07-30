@@ -1,8 +1,4 @@
-<a href="https://www.nylas.com/">
-    <img src="https://brand.nylas.com/assets/downloads/logo_horizontal_png/Nylas-Logo-Horizontal-Blue_.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
-</a>
-
-# Nylas Use Case Samples
+# Web Email Client: Read and Send Emails using Nylas Email API
 
 **⚠️ Warning: This repo is still in the alpha development stage and stability is not fully guaranteed yet**
 
