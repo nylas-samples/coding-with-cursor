@@ -1,12 +1,25 @@
-# Web Email Client: Read and Send Emails using Nylas Email API
+# Coding with Cursor 
 
-Explore working front-end and back-end sample code using an integration with Nylas.
+This repository contains the code for getting started Coding with Cursor. The initial application is described below and includes both a backend (/backend) and frontend (/frontend) applications that need to be started separately and each folder consists of a README with instructions on how to run the application.
 
-The sample applications redirect to the Nylas hosted authentication page. Once a user authenticates, it allows them to interact with the Nylas APIs from a web client.
+- [ ] Insert Image of Cursor Website
 
-Before you get started, head over to your Quickstart Application on the Nylas Dashboard for a copy of your `client id` and `client secret`. You'll need those later in the demo.
+## Application Overview:
 
-## ⚙️ Environment Setup
+### Web Email Client: Read and Send Emails using Nylas Email API
+
+- [ ] Insert Application Image
+
+The application is a web email client that allows users to read and send emails using the Nylas Email API. It is built with a React frontend and a Node.js backend. Once a user authenticates, it allows them to interact with the Nylas APIs from a web client.
+
+#### Prerequisites
+
+Before you get started, sign up for an account on [Nylas](https://nylas.com) if you don't already have one.
+- [ ] Insert UTM link to Nylas and test
+
+Use the Nylas Dashboard to create an application and grab a copy of your `client id` and click on `API Keys` to create and an API Key. You'll need those later on to build the application.
+
+#### ⚙️ Environment Setup
 
 Let’s check that our environment is set up to use the [Nylas Node SDK](https://github.com/nylas/nylas-nodejs). Check the Node version in your terminal:
 
@@ -22,15 +35,7 @@ If you don’t see a version returned, you may not have Node installed. Try the 
 
 The minimum required Node version is `v18.0.0`. As a quick check, try running `node -v` again to confirm the version. You may need to restart your terminal for the changes to take effect.
 
-### Python
-
-If choosing a `python` backend for your demo application, please make sure you have `python 3.7` or later installed. Check your installation with:
-
-```
-python3 --version
-```
-
-## ⚡️ App Set up
+#### ⚡️ App Set up
 
 View the `README.md` files in the `backend` and `frontend` directories for instructions on how to set up the server and client. These README files include set up instructions for each language.
 
@@ -38,12 +43,12 @@ Start the backend server first, then in a new terminal, start the frontend serve
 
 Once the servers are running, visit the app at [http://localhost:3000](http://localhost:3000). You can also visit the backend server at [http://localhost:9000](http://localhost:9000).
 
-## 💙 Contributing
+#### 💙 Contributing
 
 Interested in contributing to the Nylas use cases project? Thanks so much for your interest! We are always looking for improvements to the project and contributions from open-source developers are greatly appreciated.
 
 Please refer to [Contributing](CONTRIBUTING.md) for information about how to make contributions to this project. We welcome questions, bug reports, and pull requests.
 
-## 📝 License
+#### 📝 License
 
 This project is licensed under the terms of the MIT license. Please refer to [LICENSE](LICENSE.txt) for the full terms.
