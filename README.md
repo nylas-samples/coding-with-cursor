@@ -1,6 +1,8 @@
 # Coding with Cursor 
 
-This repository contains the code for getting started Coding with Cursor. The initial application is described below and includes both a backend (/backend) and frontend (/frontend) applications that need to be started separately and each folder consists of a README with instructions on how to run the application.
+This repository contains the code for getting started Coding with Cursor. 
+
+The application is detailed below and includes both a backend (`/backend`) and frontend (`/frontend`) applications that need to be started separately and each folder consists of a `README.md` on how to run the application.
 
 - [ ] Insert Image of Cursor Website
 
