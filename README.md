@@ -4,7 +4,7 @@ This repository contains the code for getting started Coding with Cursor.
 
 The application is detailed below and includes both a backend (`/backend`) and frontend (`/frontend`) applications that need to be started separately and each folder consists of a `README.md` on how to run the application.
 
-- [ ] Insert Image of Cursor Website
+<img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://github.com/user-attachments/assets/423a38e2-354c-41f2-988f-16b0bd3699b1">
 
 ## Application Overview:
 
