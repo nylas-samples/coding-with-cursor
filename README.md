@@ -6,15 +6,13 @@ The application is detailed below and includes both a backend (`/backend`) and f
 
 <img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://github.com/user-attachments/assets/423a38e2-354c-41f2-988f-16b0bd3699b1">
 
-## Application Overview:
-
-### Web Email Client: Read and Send Emails using Nylas Email API
+## Application Overview: Web Email Client
 
 <img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/Screenshot-2023-08-17-at-2.42.24-PM-2048x1132.png">
 
 The application is a web email client that allows users to read and send emails using the Nylas Email API. It is built with a React frontend and a Node.js backend. Once a user authenticates, it allows them to interact with the Nylas APIs from a web client.
 
-#### Prerequisites
+## Prerequisites
 
 Before you get started, sign up for an account on [Nylas](https://nylas.com) if you don't already have one.
 - [ ] Insert UTM link to Nylas and test
@@ -39,7 +37,7 @@ If you don’t see a version returned, you may not have Node installed. Try the 
 
 The minimum required Node version is `v18.0.0`. As a quick check, try running `node -v` again to confirm the version. You may need to restart your terminal for the changes to take effect.
 
-#### ⚡️ App Set up
+## ⚡️ App Set up
 
 View the `README.md` files in the `backend` and `frontend` directories for instructions on how to set up the server and client. These README files include set up instructions for each language.
 
@@ -47,12 +45,12 @@ Start the backend server first, then in a new terminal, start the frontend serve
 
 Once the servers are running, visit the app at [http://localhost:3000](http://localhost:3000). You can also visit the backend server at [http://localhost:9000](http://localhost:9000).
 
-#### 💙 Contributing
+## 💙 Contributing
 
 Interested in contributing to the Nylas use cases project? Thanks so much for your interest! We are always looking for improvements to the project and contributions from open-source developers are greatly appreciated.
 
 Please refer to [Contributing](CONTRIBUTING.md) for information about how to make contributions to this project. We welcome questions, bug reports, and pull requests.
 
-#### 📝 License
+## 📝 License
 
 This project is licensed under the terms of the MIT license. Please refer to [LICENSE](LICENSE.txt) for the full terms.
