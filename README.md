@@ -8,9 +8,9 @@ The application is detailed below and includes both a backend (`/backend`) and f
 
 ## Application Overview: Web Email Client
 
-<img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/Screenshot-2023-08-17-at-2.42.24-PM-2048x1132.png">
-
 The application is a web email client that allows users to read and send emails using the Nylas Email API. It is built with a React frontend and a Node.js backend. Once a user authenticates, it allows them to interact with the Nylas APIs from a web client.
+
+<img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/Screenshot-2023-08-17-at-2.42.24-PM-2048x1132.png">
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Use the Nylas Dashboard to create an application and grab a copy of your `client
 
 <img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/client_id-2048x1339.png">
 
-#### ⚙️ Environment Setup
+## ⚙️ Environment Setup
 
 Let’s check that our environment is set up to use the [Nylas Node SDK](https://github.com/nylas/nylas-nodejs). Check the Node version in your terminal:
 
