@@ -21,6 +21,8 @@ Before you get started, sign up for an account on [Nylas](https://nylas.com) if 
 
 Use the Nylas Dashboard to create an application and grab a copy of your `client id` and click on `API Keys` to create and an API Key. You'll need those later on to build the application.
 
+<img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/client_id-2048x1339.png">
+
 #### ⚙️ Environment Setup
 
 Let’s check that our environment is set up to use the [Nylas Node SDK](https://github.com/nylas/nylas-nodejs). Check the Node version in your terminal:
