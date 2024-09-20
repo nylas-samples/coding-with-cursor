@@ -10,7 +10,7 @@ The application is detailed below and includes both a backend (`/backend`) and f
 
 ### Web Email Client: Read and Send Emails using Nylas Email API
 
-- [ ] Insert Application Image
+<img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/Screenshot-2023-08-17-at-2.42.24-PM-2048x1132.png">
 
 The application is a web email client that allows users to read and send emails using the Nylas Email API. It is built with a React frontend and a Node.js backend. Once a user authenticates, it allows them to interact with the Nylas APIs from a web client.
 
