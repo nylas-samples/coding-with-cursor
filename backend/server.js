@@ -33,7 +33,9 @@ nylas.applications.getDetails({
 }).then((applicationDetails) => {
   console.log(
     'Application registered. Application Details: ',
-    JSON.stringify(applicationDetails)
+    JSON.stringify(applicationDetails).length > 100 
+      ? JSON.stringify(applicationDetails).substring(0, 97) + '...' 
+      : JSON.stringify(applicationDetails)
   );
 });
   

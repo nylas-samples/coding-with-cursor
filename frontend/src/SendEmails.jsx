@@ -81,6 +81,10 @@ function SendEmails({
     onEmailSent();
   };
 
+  const generateEmail = () => {
+    console.log('Smart Compose button clicked');
+  };
+
   return (
     <form onSubmit={send} className={`email-compose-view ${style}`}>
       {!style && <h3 className="title">New message</h3>}
@@ -129,6 +133,9 @@ function SendEmails({
         </button>
         <button className="icon" onClick={discardComposer}>
           <IconDelete />
+        </button>
+        <button className="smart-compose" onClick={generateEmail}>
+          Smart Compose
         </button>
       </div>
     </form>
