@@ -82,9 +82,35 @@ function SendEmails({
     onEmailSent();
   };
 
-  const generateEmail = () => {
-    console.log('Smart Compose button clicked');
-    console.log('User prompt:', prompt);
+  const generateEmail = async () => {
+    try {
+      setIsSending(true);
+      const url = `${nylas.serverBaseUrl}/nylas/smart-compose`;
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Authorization': userId,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Smart Compose request failed');
+      }
+
+      const data = await response.json();
+      
+      // Assuming the API returns generated text in the 'generatedText' field
+      setBody(data.generatedText);
+      setToastNotification('success');
+    } catch (error) {
+      console.error('Error in Smart Compose:', error);
+      setToastNotification('error');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -148,9 +174,9 @@ function SendEmails({
         <button 
           className="smart-compose" 
           onClick={generateEmail}
-          disabled={!prompt.trim()}
+          disabled={!prompt.trim() || isSending}
         >
-          Smart Compose
+          {isSending ? 'Generating...' : 'Smart Compose'}
         </button>
       </div>
     </form>
