@@ -451,6 +451,25 @@
       font-weight: 400;
       font-size: $fs-14;
     }
+
+    min-height: 20vh;
+  }
+
+  textarea.prompt-input {
+    padding: $spacing-8;
+    border: 0;
+    border-top: 1px solid $color-blue-100;
+    outline: 0;
+    font-weight: 400;
+    font-size: $fs-14;
+    line-height: 1.5;
+    resize: none;
+
+    &::placeholder {
+      color: $color-grey-700;
+      font-weight: 400;
+      font-size: $fs-12;
+    }
   }
 
   .composer-button-group {

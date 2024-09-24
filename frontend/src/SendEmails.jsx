@@ -18,6 +18,7 @@ function SendEmails({
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
   const [isSending, setIsSending] = useState(false);
+  const [prompt, setPrompt] = useState('');
 
   useEffect(() => {
     setTo(draftEmail.to);
@@ -83,6 +84,7 @@ function SendEmails({
 
   const generateEmail = () => {
     console.log('Smart Compose button clicked');
+    console.log('User prompt:', prompt);
   };
 
   return (
@@ -123,6 +125,15 @@ function SendEmails({
         onChange={(e) => setBody(e.target.value)}
       />
 
+      <textarea
+        className="prompt-input"
+        aria-label="AI prompt"
+        placeholder="Enter a prompt for Smart Compose"
+        rows={2}
+        value={prompt}
+        onChange={(e) => setPrompt(e.target.value)}
+      />
+
       <div className="composer-button-group">
         <button
           className={`primary ${style}`}
@@ -134,7 +145,11 @@ function SendEmails({
         <button className="icon" onClick={discardComposer}>
           <IconDelete />
         </button>
-        <button className="smart-compose" onClick={generateEmail}>
+        <button 
+          className="smart-compose" 
+          onClick={generateEmail}
+          disabled={!prompt.trim()}
+        >
           Smart Compose
         </button>
       </div>
