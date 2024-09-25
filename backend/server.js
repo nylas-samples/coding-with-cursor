@@ -129,5 +129,10 @@ app.get('/nylas/file', isAuthenticated, async (req, res) => {
   route.getFile(req, res);
 });
 
+// Add the new smart-compose route using the existing pattern
+app.post('/nylas/smart-compose', isAuthenticated, express.json(), (req, res) =>
+  route.smartCompose(req, res)
+);
+
 // Start listening on port 9000
 app.listen(port, () => console.log('App listening on port ' + port));

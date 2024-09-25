@@ -85,10 +85,30 @@ const getFile = async (req, res) => {
   return res.end(attachment);
 };
 
+const smartCompose = async (req, res) => {
+  const user = res.locals.user;
+  const { prompt } = req.body;
+
+  try {
+    const message = await nylas.messages.smartCompose.composeMessage({
+      identifier: user.grantId,
+      requestBody: {
+        prompt: prompt,
+      }
+    });
+
+    return res.json(message);
+  } catch (error) {
+    console.error('Smart Compose error:', error);
+    return res.status(500).json({ error: 'Failed to generate message' });
+  }
+};
+
 export default {
   sendEmail,
   readEmails,
   getMessage,
   getMessages,
   getFile,
+  smartCompose,
 }
