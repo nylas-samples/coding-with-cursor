@@ -14,10 +14,9 @@ The application is a web email client that allows users to read and send emails 
 
 ## Prerequisites
 
-Before you get started, sign up for an account on [Nylas](https://nylas.com) if you don't already have one.
-- [ ] Insert UTM link to Nylas and test
+Before you get started, sign up for an account on [Nylas](https://dashboard-v3.nylas.com/register?utm_source=web&utm_medium=devrel-surfaces&utm_campaign=coding-with-cursor&utm_content=udemy-course) if you don't already have one.
 
-Use the Nylas Dashboard to create an application and grab a copy of your `client id` and click on `API Keys` to create and an API Key. You'll need those later on to build the application.
+Use the Nylas Dashboard to create an application and grab a copy of your `client id` and click on `API Keys` to create and an API Key. You'll need those later on to build the application. We provide these steps as part of the online course.
 
 <img width="1203" alt="Screenshot 2024-09-20 at 3 44 32 PM" src="https://www.nylas.com/wp-content/uploads/client_id-2048x1339.png">
 
