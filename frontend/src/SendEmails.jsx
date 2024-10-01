@@ -102,8 +102,7 @@ function SendEmails({
 
       const data = await response.json();
       
-      // Assuming the API returns generated text in the 'generatedText' field
-      setBody(data.generatedText);
+      setBody(data.data.suggestion);
       setToastNotification('success');
     } catch (error) {
       console.error('Error in Smart Compose:', error);
