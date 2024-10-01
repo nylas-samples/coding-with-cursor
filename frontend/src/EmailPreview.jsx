@@ -61,7 +61,7 @@ function EmailPreview({ thread, selected }) {
         )}
         <div className="time">
           {formatPreviewDate(
-            new Date(Math.floor(thread.last_message_timestamp * 1000))
+            new Date(Math.floor(thread.latestMessageReceivedDate * 1000))
           )}
         </div>
       </div>
